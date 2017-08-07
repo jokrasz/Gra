@@ -55,7 +55,7 @@ function newGame() {
 
     playerNameElem.innerHTML = player.name;
     setGamePoints(); 
-    whoWins();
+   
    
   }
 }
@@ -104,6 +104,8 @@ function playerPick(playerPick) {
     computerPickElem.innerHTML = computerPick;
 
     checkRoundWinner(playerPick, computerPick);
+    setGamePoints()
+    whoWins()
 }
 
 function setGamePoints() {
@@ -121,6 +123,7 @@ function whoWins() {
         gameState ='ended';
         setGameElements();
     } else {
+        setGamePoints()
         alert("new round");
     }
  
